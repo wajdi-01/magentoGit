@@ -1,6 +1,7 @@
 package com.e2eTests.pageObjects;
 
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -53,6 +54,16 @@ public class CartObjects extends Base {
 	@FindBy(xpath = "//strong[@class = 'subtitle empty']")
 	public static WebElement confirmDeleteMessage;
 	
+	@FindBy(xpath = "//span[contains(text(),'View and Edit Cart')]")
+	public static WebElement viewEditCartButton;
+	@FindBy(xpath = "//tbody/tr[2]/td[1]/div[1]/a[1]")
+	public static WebElement editIconButton ;
+	@FindBy(xpath = "//input[@id='qty']")
+	public static WebElement quantityBox;
+	@FindBy(xpath = "//button[@id='product-updatecart-button']")
+	public static WebElement updatCart;
+	@FindBy(xpath = "//div[contains(text(),'Nadia Elements Shell was updated in your shopping ')]")
+	public static WebElement moficCartMessageAssert;
 	
 	
 	// **Methods**//
@@ -77,7 +88,7 @@ public class CartObjects extends Base {
 		String cartItem = itemInCart.getText();
 		int expectedValue = 1;
 		int actualValue = Integer.parseInt(cartItem);
-		Assert.assertEquals(actualValue, expectedValue);
+		Assert.assertEquals("Product is not Add !",actualValue, expectedValue);
 	}
 
 	
@@ -93,8 +104,8 @@ public class CartObjects extends Base {
 	}
 
 	public void failedAddProduct() {
-		Assert.assertTrue(sizeErrorMessage.isDisplayed());
-		Assert.assertTrue(colorErrorMessage.isDisplayed());
+		Assert.assertTrue("size error message is not displayed !",sizeErrorMessage.isDisplayed());
+		Assert.assertTrue("color error message is not displayed !",colorErrorMessage.isDisplayed());
 	}
 
 	public void selectProductClickAddToCart() {
@@ -115,7 +126,7 @@ public class CartObjects extends Base {
 		String cartItem = itemInCart.getText();
 		int expectedValue = 2;
 		int actualValue = Integer.parseInt(cartItem);
-		Assert.assertEquals(actualValue, expectedValue);
+		Assert.assertEquals("there are no two products in the cart !",actualValue, expectedValue);
 		
 	}
 	
@@ -129,13 +140,26 @@ public class CartObjects extends Base {
 	}
 	public void deleteProductAssert() {
 		String corfirmDeleteMessage = confirmDeleteMessage.getText();
-		Assert.assertEquals(corfirmDeleteMessage, "You have no items in your shopping cart.");
+		Assert.assertEquals("confirm delete message is Not displayed !",corfirmDeleteMessage, "You have no items in your shopping cart.");
 	}
-	
-	
-	
-	
-	
+	public void clickOnViewEditCartButton() {
+		viewEditCartButton.click();
+	}
+	public void clickOnEditIconButton() {
+		editIconButton.click();
+	}
+	public void modifProductQuantity() {
+		quantityBox.click();
+		quantityBox.sendKeys(Keys.DELETE);
+		quantityBox.sendKeys("2");
+	}
+	public void clickOnUpdateCart() {
+		updatCart.click();
+	}
+	public void modifCartAssert() {
+		Assert.assertTrue("Mofif cart message is Not displayed !",moficCartMessageAssert.isDisplayed());
+		
+	}
 	
 	
 	

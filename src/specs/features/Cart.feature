@@ -18,7 +18,6 @@ Feature: Verify that the add to cart functionality works correctly for all produ
     And I click on Add to Cart button
     Then Add to cart failed and error message should be displayed
 
-  
   Scenario: Add multiple products to cart
     When I place the mouse on the product to add and i click on Add to Cart button
     And I choose the size, the color and the quantity
@@ -29,20 +28,22 @@ Feature: Verify that the add to cart functionality works correctly for all produ
     And I choose the size, the color and the quantity
     And I click on Add to Cart
     Then the tow products should be added to the cart
-    
-   Scenario: Delete a product from the cart
+
+  Scenario: Delete a product from the cart
     When I place the mouse on the product to add and i click on Add to Cart button
     And I choose the size, the color and the quantity
     And I click on Add to Cart
     And I click on the cart icon
     And I delete the product already added
     Then The product should be deleted
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+  Scenario: Review and modification cart
+    When I place the mouse on the product to add and i click on Add to Cart button
+    And I choose the size, the color and the quantity
+    And I click on Add to Cart
+    And I click on the cart icon
+    And I click on View and Edit Cart button
+    And I click on Edit item parametres icon
+    And I modify the quantity of the product
+    And I click on Updat cart button
+    Then cart should be modified

@@ -80,6 +80,38 @@ public class CartSteps extends Base {
 	public void The_product_should_be_deleted() {
 		cartObjects.deleteProductAssert();
 	}
+	//**Review and modification cart**//
+	@When("I click on View and Edit Cart button")
+	public void I_click_on_View_and_Edit_Cart_button() {
+		PageFactory.initElements(driver, CartObjects.class);
+		cartObjects.clickOnViewEditCartButton();
+	}
+	@When("I click on Edit item parametres icon")
+	public void I_click_on_Edit_item_parametres_icon() {
+		cartObjects.clickOnEditIconButton();
+	}
+	@When("I modify the quantity of the product")
+	public void I_modify_the_quantity_of_the_product() {
+		cartObjects.modifProductQuantity();
+	}
+	@When("I click on Updat cart button")
+	public void I_click_on_Updat_cart_button() {
+		cartObjects.clickOnUpdateCart();
+	}
+	@Then("cart should be modified")
+	public void cart_should_be_modified() {
+		cartObjects.modifCartAssert();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
