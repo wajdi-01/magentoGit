@@ -78,7 +78,7 @@ public class SortingObjects extends Base {
 			sizeTextList.add(sizeText);
 		}
 		for (String sizeText : sizeTextList) {
-			Assert.assertEquals("M", sizeText);
+			Assert.assertEquals("Not all sizes are M !","M", sizeText);
 		}
 	}
 
@@ -98,7 +98,7 @@ public class SortingObjects extends Base {
 		System.out.println("color number : " + numberOfColors);
 		for (String colorText : colorResult) {
 			System.out.println(colorText);
-			Assert.assertEquals("Black", colorText);
+			Assert.assertEquals("The color is not Black !","Black", colorText);
 		}
 		String itemsResult = driver.findElement(By.xpath("//body/div[2]/main[1]/div[3]/div[1]/div[2]/p[1]")).getText()
 				.replace(" Items", "");
@@ -150,7 +150,7 @@ public class SortingObjects extends Base {
 				isSorted = false;
 				break;
 			}
-			Assert.assertTrue(isSorted);
+			Assert.assertTrue("the prices are Not displayed in alphabetical order !",isSorted);
 		}
 		System.out.println(productNames);
 
