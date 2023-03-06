@@ -1,3 +1,4 @@
+@sorting
 Feature: Verify that the sorting options for products are working correctly
   As a user, 
   I want to verify that the sorting options for products are working correctly,
@@ -36,7 +37,6 @@ Feature: Verify that the sorting options for products are working correctly
     And I select product name from the dropdown menu
     Then the result should be displayed in alphabetical order
 
-  
   Scenario: Sorting by price organization,most expensive to least expensive
     When I click on Gear link
     And I click on Bags button
@@ -50,3 +50,20 @@ Feature: Verify that the sorting options for products are working correctly
     And I select product name from the dropdown menu
     And I click on Sort By arrow
     Then the result should be displayed in reverse alphabetical order
+
+  Scenario: Change the display from Grid to List
+    When I click on Gear link
+    And I click on Bags button
+    And I click on List button
+    Then Products should be displayed in list form
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

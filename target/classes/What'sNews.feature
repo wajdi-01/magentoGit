@@ -1,3 +1,4 @@
+@whatsNews
 Feature: Verify Whats News Page
   I want to ensure all links in the Whats New page ead to the correct pages
   

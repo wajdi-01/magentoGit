@@ -1,3 +1,4 @@
+@women
 Feature: Verify Womens Menu and page fonctionality
 
   Background: 

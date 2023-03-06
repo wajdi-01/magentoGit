@@ -1,4 +1,4 @@
-
+@men
 Feature: Verify Men Menu and page fonctionality
   As a user
   I want to ensure all links in the Accueil page lead to the correct pages
@@ -6,7 +6,7 @@ Feature: Verify Men Menu and page fonctionality
 
   Background: 
     Given I am on the Accueil page
-
+@test
   Scenario: check Jakets links in Men menu
     When I click on the link Men Jakets through the hidden menu
     Then I should be redirected to Men Jackets page

@@ -1,3 +1,4 @@
+@checkout
 Feature: Verify Checkout functionality
   As a customer,
   I want to be able to checkout and complete my purchase,
@@ -67,7 +68,7 @@ Feature: Verify Checkout functionality
     And select Fixed shipping methods and click next button
     And I click on Place Order button
     Then the order should be placed successfully
-@test
+
   Scenario: Checkout after closing the browser and re-launch it
     Given I am on the Accueil page
     And I click on Shop Yoga Now link
@@ -79,15 +80,16 @@ Feature: Verify Checkout functionality
     And fill all fields with valid information
     And select Tabel Rate shipping methods and click next button
     And close browser and relaunch it
-	  And I click on Place Order button 
+    And I click on Place Order button
     Then the order should be placed successfully
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+  Scenario: Add a Review
+    Given I am on the Accueil page
+    And I click on Shop Yoga Now link
+    And I click on a product
+    And I click on Add Your Review button
+    And I fill a Nickname "Lewis" summary "Great" and review "satisfied"
+    And I select Rating and i click on Submit Review button
+    Then The Review should be added
+
+ 

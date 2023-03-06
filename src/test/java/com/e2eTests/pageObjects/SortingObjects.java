@@ -6,7 +6,9 @@ import java.util.List;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.FindBy;
 
 import com.e2e.lumaProject.Base;
@@ -38,6 +40,28 @@ public class SortingObjects extends Base {
 	public static WebElement sortByArrow;
 	@FindBy(xpath = "//ol[@class='products list items product-items']")
 	public static WebElement productTitel;
+	@FindBy(xpath = "//a[@title = 'List']")
+	public static WebElement listButton;
+	@FindBy(xpath = "//body/div[2]/main[1]/div[3]/div[1]/div[3]")
+	public static WebElement gridDsplay;
+	@FindBy(xpath = "//body/div[2]/main[1]/div[3]/div[1]/div[3]")
+	public static WebElement listDisplay;
+	@FindBy(xpath = "//a[contains(text(),'Add Your Review')]")
+	public static WebElement addReviewButton;
+	@FindBy(xpath = "//input[@id='nickname_field']")
+	public static WebElement nicknameField;
+	@FindBy(xpath = "//input[@id='summary_field']")
+	public static WebElement summaryField;
+	@FindBy(xpath = "//textarea[@id='review_field']")
+	public static WebElement reviewField;
+	@FindBy(xpath = "//body/div[2]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[12]/div[1]/a[1]/span[1]/span[1]/img[1]")
+	public static WebElement productToReview;
+	@FindBy(xpath = "/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[3]/div[1]/div[6]/div[2]/div[2]/form[1]/fieldset[1]/fieldset[1]/div[1]/div[1]/div[1]/div[1]/input[3]")
+	public static WebElement ratingReview;
+	@FindBy(xpath = "//span[contains(text(),'Submit Review')]")
+	public static WebElement submitButton;
+	@FindBy(xpath = "//div[contains(text(),'You submitted your review for moderation.')]")
+	public static WebElement addReviewSuccessMessageAssert;
 
 	// **Methods**//
 	public void selectPriceRange() {
@@ -78,7 +102,7 @@ public class SortingObjects extends Base {
 			sizeTextList.add(sizeText);
 		}
 		for (String sizeText : sizeTextList) {
-			Assert.assertEquals("Not all sizes are M !","M", sizeText);
+			Assert.assertEquals("Not all sizes are M !", "M", sizeText);
 		}
 	}
 
@@ -98,7 +122,7 @@ public class SortingObjects extends Base {
 		System.out.println("color number : " + numberOfColors);
 		for (String colorText : colorResult) {
 			System.out.println(colorText);
-			Assert.assertEquals("The color is not Black !","Black", colorText);
+			Assert.assertEquals("The color is not Black !", "Black", colorText);
 		}
 		String itemsResult = driver.findElement(By.xpath("//body/div[2]/main[1]/div[3]/div[1]/div[2]/p[1]")).getText()
 				.replace(" Items", "");
@@ -150,7 +174,7 @@ public class SortingObjects extends Base {
 				isSorted = false;
 				break;
 			}
-			Assert.assertTrue("the prices are Not displayed in alphabetical order !",isSorted);
+			Assert.assertTrue("the prices are Not displayed in alphabetical order !", isSorted);
 		}
 		System.out.println(productNames);
 
@@ -190,6 +214,43 @@ public class SortingObjects extends Base {
 			System.out.println(productName);
 		}
 
+	}
+
+	public void clickOnListButton() {
+		listButton.click();
+	}
+
+	public void listDisplayeAssert() {
+		String list = listDisplay.getAttribute("class");
+		Assert.assertTrue("product are Not displayed in List form !", list.contains("products-list"));
+	}
+
+	public void selectProduct() {
+		productToReview.click();
+	}
+
+	public void clickOnAddYourReview() {
+		addReviewButton.click();
+	}
+
+	public void fillAllReviewfields(String nickName, String summary, String review) {
+		nicknameField.sendKeys(nickName);
+		summaryField.sendKeys(summary);
+		reviewField.sendKeys(review);
+	}
+
+	public void addRatingAndClickSubmit() {
+		try {
+			ratingReview.click();
+		} catch (Exception e) {
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
+			executor.executeScript("arguments[0].click();", ratingReview);
+		}
+		submitButton.click();
+	}
+
+	public void addReviewAssert() {
+		Assert.assertTrue("Review is Not Add with success !", addReviewSuccessMessageAssert.isDisplayed());
 	}
 
 }

@@ -1,3 +1,4 @@
+@cart
 Feature: Verify that the add to cart functionality works correctly for all products.
   As a customer,
   I want to ensure that I can add any product to my shopping cart,

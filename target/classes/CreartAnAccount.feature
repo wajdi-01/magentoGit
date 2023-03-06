@@ -1,4 +1,4 @@
-
+@creatAnCount
 Feature: Create an Account
   As a user, I want to create an account on YUMA application,so that I can access personalized options and track my purchases
 

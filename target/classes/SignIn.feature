@@ -1,3 +1,4 @@
+@signIn
 Feature: Sign In
   	As a registered user
     I want to sign in to my account
