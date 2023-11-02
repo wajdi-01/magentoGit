@@ -20,8 +20,10 @@ public class AccueilPageSteps extends Base {
 	// **check WHATS NEW link**//
 	@Given("I am on the Accueil page")
 	public void i_am_on_the_accueil_page() {
+		PageFactory.initElements(driver, AccueilPageObjects.class);
 		lunchBrowser();
 		driver.get(props.getProperty("url"));
+		
 	}
 
 	@When("I click on whats new link")

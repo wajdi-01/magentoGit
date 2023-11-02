@@ -3,7 +3,7 @@ Feature: Verify Womens Menu and page fonctionality
 
   Background: 
     Given I am on the Accueil page
-
+@test
   Scenario: check Jakets links in womens menu
     When I click on the link Women Jakets through the hidden menu
     Then I should be redirected to Jackets page

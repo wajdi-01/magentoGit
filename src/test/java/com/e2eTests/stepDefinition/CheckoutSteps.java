@@ -10,13 +10,18 @@ import io.cucumber.java.en.When;
 
 public class CheckoutSteps extends Base {
 	
-	final CheckoutObjects checkoutObjects = new CheckoutObjects();
+	CheckoutObjects checkoutObjects;
+	
+	public CheckoutSteps() {
+		PageFactory.initElements(driver, CheckoutObjects.class);
+		this.checkoutObjects = new CheckoutObjects();
+	}
 	
 	
-	//**Successful Checkout,Tabel Rate Shipping Methods**//
+	//**Successful Checkout,Table Rate Shipping Methods**//
 	@When("I click on Proceed to Cheackout button")
 	public void i_click_on_proceed_to_cheackout_button() {
-	   PageFactory.initElements(driver, CheckoutObjects.class);
+	   //PageFactory.initElements(driver, CheckoutObjects.class);
 	   checkoutObjects.clickOnProceedToCheckout();
 	}
 
@@ -43,13 +48,13 @@ public class CheckoutSteps extends Base {
 	//**Successful Checkout,Fixed Shipping Methods**//
 	@Then("select Fixed shipping methods and click next button")
 	public void select_Fixed_shipping_methods_and_click_next_button() {
-		PageFactory.initElements(driver, CheckoutObjects.class);
+		//PageFactory.initElements(driver, CheckoutObjects.class);
 		checkoutObjects.fixedMethodsNext();
 	}
 	//**Failed Checkout,empty informations**//
 	@When("I leave all the chomps empty")
 	public void I_leave_all_the_chomps_empty() {
-		PageFactory.initElements(driver, CheckoutObjects.class);
+		//PageFactory.initElements(driver, CheckoutObjects.class);
 		checkoutObjects.leaveAllFieldsEmpty();
 	}
 	@Then("the order should be failed")
@@ -59,7 +64,7 @@ public class CheckoutSteps extends Base {
 	//**Failed checkout, no shipping method selected**//
 	@When("Click next button")
 	public void Click_next_button() {
-		PageFactory.initElements(driver, CheckoutObjects.class);
+		//PageFactory.initElements(driver, CheckoutObjects.class);
 		checkoutObjects.clickOnNextButton();
 	}
 	@Then("An error message should be displayed")
@@ -69,7 +74,7 @@ public class CheckoutSteps extends Base {
 	//**Checkout after closing the browser and re-launch it**//
 	@When("close browser and relaunch it")
 	public void close_browser_and_relaunch_it() {
-		PageFactory.initElements(driver, CheckoutObjects.class);
+		//PageFactory.initElements(driver, CheckoutObjects.class);
 		
 	}
 	

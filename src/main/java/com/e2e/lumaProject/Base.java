@@ -52,9 +52,10 @@ public class Base {
 			driver = new EdgeDriver();
 
 		}
+			
 		driver.manage().window().maximize();
 
-		// driver.get(props.getProperty("url"));
+		driver.get(props.getProperty("url"));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(25));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
 		// driver.manage().deleteAllCookies();

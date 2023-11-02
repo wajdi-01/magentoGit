@@ -29,7 +29,7 @@ Feature: Verify that the add to cart functionality works correctly for all produ
     And I choose the size, the color and the quantity
     And I click on Add to Cart
     Then the tow products should be added to the cart
-
+ 
   Scenario: Delete a product from the cart
     When I place the mouse on the product to add and i click on Add to Cart button
     And I choose the size, the color and the quantity
@@ -37,7 +37,7 @@ Feature: Verify that the add to cart functionality works correctly for all produ
     And I click on the cart icon
     And I delete the product already added
     Then The product should be deleted
-
+  
   Scenario: Review and modification cart
     When I place the mouse on the product to add and i click on Add to Cart button
     And I choose the size, the color and the quantity

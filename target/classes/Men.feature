@@ -1,4 +1,4 @@
-@men
+@men 
 Feature: Verify Men Menu and page fonctionality
   As a user
   I want to ensure all links in the Accueil page lead to the correct pages
@@ -6,7 +6,7 @@ Feature: Verify Men Menu and page fonctionality
 
   Background: 
     Given I am on the Accueil page
-@test
+
   Scenario: check Jakets links in Men menu
     When I click on the link Men Jakets through the hidden menu
     Then I should be redirected to Men Jackets page
@@ -50,22 +50,22 @@ Feature: Verify Men Menu and page fonctionality
     When I click on Men link
     And I click on Men Jackets button
     Then I should be redirected to Men Jackets page
-
+ 
   Scenario: check Tees in Men page
     When I click on Men link
     And I click on Men Tees button
     Then I should be redirected to Men Tees page
-
+ 
   Scenario: check Tanks in Men page
     When I click on Men link
     And I click on Men Tanks button
     Then I should be redirected Men Tanks page
-
+ 
   Scenario: check Pants in Men page
     When I click on Men link
     And I click on Men Pants button
     Then I should be redirected to Men Pants page
-
+ 
   Scenario: check Shorts in Men page
     When I click on Men link
     And I click on Men Shorts button

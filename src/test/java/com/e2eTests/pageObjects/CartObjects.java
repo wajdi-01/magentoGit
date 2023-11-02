@@ -11,15 +11,15 @@ import com.e2e.lumaProject.Base;
 public class CartObjects extends Base {
 
 	// **FindBy**//    
-	@FindBy(xpath = "//body/div[2]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[12]/div[1]/a[1]/span[1]/span[1]/img[1]")
+	@FindBy(xpath = "//body/div[1]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[12]/div[1]/a[1]/span[1]/span[1]/img[1]")
 	public static WebElement productToAddToCart;
-	@FindBy(xpath = "//body[1]/div[2]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[12]/div[1]/div[1]/div[4]/div[1]/div[1]/form[1]/button[1]/span[1]")
+	@FindBy(xpath = "//body[1]/div[1]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[12]/div[1]/div[1]/div[4]/div[1]/div[1]/form[1]/button[1]/span[1]")
 	public static WebElement addCartHiddenButton;
-	@FindBy(xpath = "/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]")
+	@FindBy(xpath = "//div[@id='option-label-size-143-item-167']")
 	public static WebElement sizeOption;
-	@FindBy(xpath = "/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[4]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]")
+	@FindBy(xpath = "//div[@id='option-label-color-93-item-49']")
 	public static WebElement colorOption;
-	@FindBy(xpath = "/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[4]/form[1]/div[2]/div[1]/div[1]/div[2]/button[1]/span[1]")
+	@FindBy(xpath = "/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[4]/form[1]/div[2]/div[1]/div[1]/div[2]/button[1]/span[1]")
 	public static WebElement productAddCartButton;
 	@FindBy(xpath = "//header/div[2]/div[1]/a[1]")
 	public static WebElement cartIconButton;
@@ -31,17 +31,17 @@ public class CartObjects extends Base {
 	public static WebElement sizeErrorMessage;
 	@FindBy(xpath = "//div[@for = 'super_attribute[143]']")
 	public static WebElement colorErrorMessage;
-	@FindBy(xpath = "//body[1]/div[2]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[7]/div[1]/div[1]/div[4]/div[1]/div[1]/form[1]/button[1]/span[1]")
+	@FindBy(xpath = "//body[1]/div[1]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[12]/div[1]/div[1]/div[4]/div[1]/div[1]/form[1]/button[1]/span[1]")
 	public static WebElement addCartHiddenButtonForFailed;
-	@FindBy(xpath = "//body/div[2]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[7]/div[1]/a[1]/span[1]/span[1]/img[1]")
+	@FindBy(xpath = "//body/div[1]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[12]/div[1]/a[1]/span[1]/span[1]/img[1]")
 	public static WebElement productToAddToCartFailedCase;
-	@FindBy(xpath = "//button[@id='product-addtocart-button']")
+	@FindBy(xpath = "/html[1]/body[1]/div[1]/main[1]/div[2]/div[1]/div[1]/div[4]/form[1]/div[2]/div[1]/div[1]/div[2]/button[1]/span[1]")
 	public static WebElement addCartConfirmButton;
 	@FindBy(xpath = "//header/div[2]/a[1]/img[1]")
 	public static WebElement homeLogoButton;
-	@FindBy(xpath = "//body/div[2]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[4]/div[1]/a[1]/span[1]/span[1]/img[1]")
+	@FindBy(xpath = "//body/div[1]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[4]/div[1]/a[1]/span[1]/span[1]/img[1]")
 	public static WebElement product;
-	@FindBy(xpath = "//body[1]/div[2]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[4]/div[1]/div[1]/div[4]/div[1]/div[1]/form[1]/button[1]/span[1]")
+	@FindBy(xpath = "//body[1]/div[1]/main[1]/div[3]/div[1]/div[3]/ol[1]/li[4]/div[1]/div[1]/div[4]/div[1]/div[1]/form[1]/button[1]/span[1]")
 	public static WebElement addCartHiddenProduct;
 	@FindBy(xpath = "//div[@id='option-label-size-143-item-172']")
 	public static WebElement sizeProduct;
@@ -49,7 +49,7 @@ public class CartObjects extends Base {
 	public static WebElement colorProduct;
 	@FindBy(xpath = "//header/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[1]/div[1]/div[3]/div[2]/a[1]")
 	public static WebElement deleteButton;
-	@FindBy(xpath = "//body/div[4]/aside[2]/div[2]/footer[1]/button[2]")
+	@FindBy(xpath = "//span[contains(text(),'OK')]")
 	public static WebElement confirmDelete;
 	@FindBy(xpath = "//strong[@class = 'subtitle empty']")
 	public static WebElement confirmDeleteMessage;

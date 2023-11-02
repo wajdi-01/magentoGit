@@ -5,12 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-
 import com.e2e.lumaProject.Base;
 
 public class AccueilPageObjects extends Base {
-	
-	
 
 	final static String WHATS_NEW_BUTTOM = "//span[contains(text(),\"What's New\")]";
 	final static String WHATS_NEW_PAGE_ASSERT = "//strong[contains(text(),\"What's New\")]";
@@ -28,7 +25,7 @@ public class AccueilPageObjects extends Base {
 	final static String SIGN_IN_PAGE_ASSERT = "//span[contains(text(),'Customer Login')]";
 	final static String CREAT_AN_ACCOUNT_BUTTON = "//a[contains(text(), 'Create an Account')]";
 	final static String CREAT_AN_ACCOUNT_PAGE_ASSERT = "//span[contains(text(),'Create New Customer Account')]";
-	final static String CADET_ICON_BUTTON = "/html[1]/body[1]/div[2]/header[1]/div[2]/div[1]/a[1]";
+	final static String CADET_ICON_BUTTON = "//header/div[2]/div[1]/a[1]";
 	final static String CADET_CONTENT_DISPLAY = "//strong[contains(text(),'You have no items in your shopping cart.')]";
 	final static String SHOPING_NOW_BUTTON = "//span[contains(text(),'Shop New Yoga')]";
 	final static String NEW_YOGA_COLLLECTION_PAGE_ASSERT = "//strong[contains(text(),'New Luma Yoga Collection')]";
@@ -104,8 +101,7 @@ public class AccueilPageObjects extends Base {
 	public static WebElement ecoFriendlylink;
 	@FindBy(how = How.XPATH, using = ECO_FRIENDLY_PAGE_ASSERT)
 	public static WebElement ecoFriendlyPageAssert;
-	
-	
+
 	// **Methods**//
 
 	public void clickOnWhatsNewButton() {
@@ -113,7 +109,8 @@ public class AccueilPageObjects extends Base {
 	}
 
 	public void WhatsNewPageAssert() {
-		Assert.assertTrue("What's New page is Not displayed !", whatsNewPageAssert.isDisplayed());
+		String errorMessage = "What's New page is Not displayed !";
+		Assert.assertTrue(errorMessage, whatsNewPageAssert.isDisplayed());
 	}
 
 	public void clickOnWomenBtton() {
@@ -121,7 +118,8 @@ public class AccueilPageObjects extends Base {
 	}
 
 	public void womenPageAssert() {
-		Assert.assertTrue(" Women page is Not displayed !", womenPageAssert.isDisplayed());
+		String errorMessage = " Women page is Not displayed !";
+		Assert.assertTrue(errorMessage, womenPageAssert.isDisplayed());
 	}
 
 	public void clickOnMenButton() {
@@ -129,7 +127,8 @@ public class AccueilPageObjects extends Base {
 	}
 
 	public void menPageAssert() {
-		Assert.assertTrue(" Men page is Not displayed !", menPageAssert.isDisplayed());
+		String errorMessage = "Men page is Not displayed !";
+		Assert.assertTrue(errorMessage, menPageAssert.isDisplayed());
 	}
 
 	public void clickOnGearButton() {
@@ -137,7 +136,8 @@ public class AccueilPageObjects extends Base {
 	}
 
 	public void gearPageAssert() {
-		Assert.assertTrue(" Gear page is Not displayed !", gearPageAssert.isDisplayed());
+		String errorMessage = "Gear page is Not displayed !";
+		Assert.assertTrue(errorMessage, gearPageAssert.isDisplayed());
 	}
 
 	public void clickOnTrainingBtton() {
@@ -145,7 +145,8 @@ public class AccueilPageObjects extends Base {
 	}
 
 	public void trainingPageAssert() {
-		Assert.assertTrue(" Training page is Not displayed !", trainingPageAssert.isDisplayed());
+		String errorMessage = " Training page is Not displayed !";
+		Assert.assertTrue(errorMessage, trainingPageAssert.isDisplayed());
 	}
 
 	public void clickOnSaleButton() {
@@ -153,7 +154,8 @@ public class AccueilPageObjects extends Base {
 	}
 
 	public void salePageAssert() {
-		Assert.assertTrue("Sale page is Not displayed !", salePageAssert.isDisplayed());
+		String errorMessage = "Sale page is Not displayed !";
+		Assert.assertTrue(errorMessage, salePageAssert.isDisplayed());
 	}
 
 	public void clickOnSignInButton() {
@@ -161,7 +163,8 @@ public class AccueilPageObjects extends Base {
 	}
 
 	public void signInPageAssert() {
-		Assert.assertTrue("SignIn page is Not displayed !", signInPageAssert.isDisplayed());
+		String errorMessage = "SignIn page is Not displayed !";
+		Assert.assertTrue(errorMessage, signInPageAssert.isDisplayed());
 	}
 
 	public void clickOnCreatAnAccountButton() {
@@ -169,7 +172,8 @@ public class AccueilPageObjects extends Base {
 	}
 
 	public void creatAnAccountPageAssert() {
-		Assert.assertTrue(" Creat An Account page is Not displayed !", creatAnAccountPageAssert.isDisplayed());
+		String errorMessage = " Creat An Account page is Not displayed !";
+		Assert.assertTrue(errorMessage, creatAnAccountPageAssert.isDisplayed());
 	}
 
 	public void clickOnCadetIconButton() {
@@ -177,7 +181,11 @@ public class AccueilPageObjects extends Base {
 	}
 
 	public void cadetContentDisplay() {
-		Assert.assertTrue("Cadet message is Not displayed !", casetContentDisplayAssert.isDisplayed());
+		String expectedText = "You have no items in your shopping cart.";
+		String actualText = casetContentDisplayAssert.getText();
+		String errorMessage = String.format("Cart message is Not displayed! Expected text : '%s', actual text : '%s'",
+				expectedText, actualText);
+		Assert.assertEquals(errorMessage, expectedText, actualText);
 	}
 
 	public void clickOnShopingNowButton() {
@@ -185,7 +193,8 @@ public class AccueilPageObjects extends Base {
 	}
 
 	public void newYogaCollectionPageAssert() {
-		Assert.assertTrue(" New Yoga Collection page is Not displayed !",newYogaCollectionPageAssert.isDisplayed());
+		String errorMessage = " New Yoga Collection page is Not displayed !";
+		Assert.assertTrue(errorMessage, newYogaCollectionPageAssert.isDisplayed());
 	}
 
 	public void clickOnTwentyPercentOffLink() {
@@ -193,7 +202,8 @@ public class AccueilPageObjects extends Base {
 	}
 
 	public void pantShoopingPageAssert() {
-		Assert.assertTrue(" Shopping Now page is Not displayed !",pantsShopPageAssert.isDisplayed());
+		String errorMessage = " Shopping Now page is Not displayed !";
+		Assert.assertTrue(errorMessage, pantsShopPageAssert.isDisplayed());
 	}
 
 	public void clickOnTeesLink() {
@@ -201,30 +211,35 @@ public class AccueilPageObjects extends Base {
 	}
 
 	public void teesShopPageAssert() {
-		Assert.assertTrue("Tees page is Not displayed !",teesPageAssert.isDisplayed());
+		String errorMessage = "Tees page is Not displayed !";
+		Assert.assertTrue(errorMessage, teesPageAssert.isDisplayed());
 	}
+
 	public void clickOnErinRecommendsLink() {
 		shopErinCommendsLink.click();
 	}
+
 	public void erinCommendsShopPageAssert() {
-		Assert.assertTrue("Erin Recommends page is Not displayed !",erinCommendsShopPageAssert.isDisplayed());
+		String errorMessage = "Erin Recommends page is Not displayed !";
+		Assert.assertTrue(errorMessage, erinCommendsShopPageAssert.isDisplayed());
 	}
+
 	public void clickOnPerformanceLink() {
 		shopPerformanceLink.click();
 	}
+
 	public void performanceFabricsPageAssert() {
-		Assert.assertTrue("Performance Fabrics page is Not displayed !",performanceFabricsPageAssert.isDisplayed());
+		String errorMessage = "Performance Fabrics page is Not displayed !";
+		Assert.assertTrue(errorMessage, performanceFabricsPageAssert.isDisplayed());
 	}
+
 	public void clickOnEcoFriendlyLink() {
 		ecoFriendlylink.click();
 	}
+
 	public void ecoFriendlyPageAssert() {
-		Assert.assertTrue("Eco Friendly page is Not displayed !",ecoFriendlyPageAssert.isDisplayed());
+		String errorMessage = "Eco Friendly page is Not displayed !";
+		Assert.assertTrue(errorMessage, ecoFriendlyPageAssert.isDisplayed());
 	}
-	
-	
-	
-	
-	
-	
+
 }

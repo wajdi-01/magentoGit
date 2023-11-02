@@ -21,7 +21,6 @@ Feature: Verify that all Gear links lead to the correct pages
     When I click on Gear link
     And I click on Watches button
     Then I should be redirected to Watches page
-
   Scenario: check Bags links in hidden menu
     When I click on Bags link through the hidden menu
     Then I should be redirected to Bags page

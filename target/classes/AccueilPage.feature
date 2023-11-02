@@ -3,7 +3,7 @@ Feature: Verify that all links lead to the correct pages
   As a user
   I want to ensure all links in the Accueil page lead to the correct pages
   So that I can navigate the site effectively
-
+@test
   Scenario: check WHATS NEW link
     Given I am on the Accueil page
     When I click on whats new link

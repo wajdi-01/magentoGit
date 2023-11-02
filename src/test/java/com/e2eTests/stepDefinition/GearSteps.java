@@ -9,25 +9,33 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class GearSteps extends Base {
-	
-	static GearObjects gearObjects = new GearObjects(); 
-	
-	//**check Bags link**//
+
+	// static GearObjects gearObjects = new GearObjects();
+
+	final GearObjects gearObjects;
+
+	public GearSteps() {
+		PageFactory.initElements(driver, GearObjects.class);
+		this.gearObjects = new GearObjects();
+	}
+
+	// **check Bags link**//
 	@When("I click on Bags button")
 	public void i_click_on_bags_button() {
-		PageFactory.initElements(driver, GearObjects.class);
+		// PageFactory.initElements(driver, GearObjects.class);
 		gearObjects.clickOnBags();
-	    
+
 	}
 
 	@Then("I should be redirected to Bags page")
 	public void i_should_be_redirected_to_bags_page() {
 		gearObjects.bagsPageAssert();
 	}
-	//**check Fitness Equipment link**//
+
+	// **check Fitness Equipment link**//
 	@When("I click on Fitness Equipment button")
 	public void i_click_on_fitness_equipment_button() {
-		PageFactory.initElements(driver, GearObjects.class);
+		// PageFactory.initElements(driver, GearObjects.class);
 		gearObjects.clickOnFitnessEquipmentLink();
 	}
 
@@ -35,10 +43,11 @@ public class GearSteps extends Base {
 	public void i_should_be_redirected_to_fitness_equipment_page() {
 		gearObjects.fitnessEquipmentPageAssert();
 	}
-	//**check Watches link**//
+
+	// **check Watches link**//
 	@When("I click on Watches button")
 	public void i_click_on_watches_button() {
-		PageFactory.initElements(driver, GearObjects.class);
+		// PageFactory.initElements(driver, GearObjects.class);
 		gearObjects.clickOnWatchesLink();
 	}
 
@@ -46,28 +55,26 @@ public class GearSteps extends Base {
 	public void i_should_be_redirected_to_watches_page() {
 		gearObjects.watchesPageAssert();
 	}
-	//**check Bags links in hidden menu**//
+
+	// **check Bags links in hidden menu**//
 	@When("I click on Bags link through the hidden menu")
 	public void i_click_on_bags_link_through_the_hidden_menu() {
-		PageFactory.initElements(driver, GearObjects.class);
+		// PageFactory.initElements(driver, GearObjects.class);
 		gearObjects.clickOnBagsHiddenOption();
 	}
-	//**check Fitness Equipment links in hidden menu**//
+
+	// **check Fitness Equipment links in hidden menu**//
 	@When("I click on Fitness Equipment through the hidden menu")
 	public void i_click_on_fitness_equipment_through_the_hidden_menu() {
-		PageFactory.initElements(driver, GearObjects.class);
+		// PageFactory.initElements(driver, GearObjects.class);
 		gearObjects.clickOnFitnessEquipmentHiddenOption();
 	}
-	//**check Watches links in hidden menu**//
+
+	// **check Watches links in hidden menu**//
 	@When("I click on Watches through the hidden menu")
 	public void i_click_on_watches_through_the_hidden_menu() {
-		PageFactory.initElements(driver, GearObjects.class);
+		// PageFactory.initElements(driver, GearObjects.class);
 		gearObjects.clickOnWatchesHiddenOption();
 	}
-	
-	
-	
-	
-	
 
 }

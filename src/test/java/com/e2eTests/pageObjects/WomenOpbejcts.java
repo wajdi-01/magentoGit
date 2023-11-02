@@ -16,19 +16,19 @@ public class WomenOpbejcts extends Base {
 	
 	
 	//**FindBy**//
-	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/a[1]/span[2]" )
+	@FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/a[1]/span[2]" )
 	public static WebElement womenButton;
-	@FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/a[1]/span[2]" )
+	@FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/a[1]/span[2]")
 	public static WebElement topsOption;
-	@FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[1]/a[1]/span[1]" )
+	@FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[1]/a[1]/span[1]")
 	public static WebElement jacketsOption;
 	@FindBy(xpath = "//strong[contains(text(),'Jackets')]")
 	public static WebElement jacketsPageAssert;
-	@FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[2]/a[1]/span[1]")
+	@FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[2]/a[1]/span[1]")
 	public static WebElement hoodiesSweatshirts; 
 	@FindBy(xpath = "//strong[contains(text(),'Hoodies & Sweatshirts')]")
 	public static WebElement hoodiesSweatshirtsAssert;
-	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[3]/a[1]" )
+	@FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[3]/a[1]/span[1]")
 	public static WebElement teesOption;
 	@FindBy(xpath = "//strong[contains(text(),'Tees')]")
 	public static WebElement teesOptionAssert;
@@ -36,13 +36,13 @@ public class WomenOpbejcts extends Base {
 	public static WebElement brasTanksOption;
 	@FindBy(xpath = "//strong[contains(text(),'Bras & Tanks')]")
 	public static WebElement brasTanksAssert;
-	@FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[2]/ul[1]/li[1]/a[1]/span[1]")
+	@FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[2]/ul[1]/li[1]/a[1]/span[1]")
 	public static WebElement pantsOption;
 	@FindBy(xpath = "//strong[contains(text(),'Pants')]")
 	public static WebElement pantsOptionAssert;
-	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[2]/a[1]")
+	@FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[2]/a[1]/span[2]")
 	public static WebElement BottomsOption;
-	@FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[2]/ul[1]/li[2]/a[1]/span[1]" )
+	@FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[2]/ul[1]/li[2]/ul[1]/li[2]/a[1]/span[1]" )
 	public static WebElement shortsOption;
 	@FindBy(xpath = "//strong[contains(text(),'Shorts')]")
 	public static WebElement shortsAssert;

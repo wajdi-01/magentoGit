@@ -13,24 +13,24 @@ public class GearObjects extends Base{
 	//**FindBy**//
 	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[4]/a[1]/span[2]")
 	public static WebElement gearButton;
-	@FindBy(xpath = "//body/div[2]/main[1]/div[4]/div[2]/div[1]/div[2]/dl[1]/dd[1]/ol[1]/li[1]/a[1]")
+	@FindBy(xpath = "//body/div[1]/main[1]/div[4]/div[2]/div[1]/div[2]/dl[1]/dd[1]/ol[1]/li[1]/a[1]")
 	public static WebElement bagsButton;
 	@FindBy(xpath = "//strong[contains(text(),'Bags')]")
 	public static WebElement bagsPageAssert;
-	@FindBy(xpath = "//body/div[2]/main[1]/div[4]/div[2]/div[1]/div[2]/dl[1]/dd[1]/ol[1]/li[2]/a[1]")
+	@FindBy(xpath = "//body/div[1]/main[1]/div[4]/div[2]/div[1]/div[2]/dl[1]/dd[1]/ol[1]/li[2]/a[1]")
 	public static WebElement fitnessEquipmentButton;
 	@FindBy(xpath = "//strong[contains(text(),'Fitness Equipment')]")
 	public static WebElement fitnessEquipmentPageAssert;
-	@FindBy(xpath = "//body/div[2]/main[1]/div[4]/div[2]/div[1]/div[2]/dl[1]/dd[1]/ol[1]/li[3]/a[1]")
+	@FindBy(xpath = "//body/div[1]/main[1]/div[4]/div[2]/div[1]/div[2]/dl[1]/dd[1]/ol[1]/li[3]/a[1]")
 	public static WebElement watchesButton;
 	@FindBy(xpath = "//strong[contains(text(),'Watches')]")
 	public static WebElement watchesPageAssert;
 	
-	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[4]/ul[1]/li[1]/a[1]/span[1]")
+	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[4]/ul[1]/li[1]/a[1]/span[1]")
 	public static WebElement bagsHiddenOption;
-	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[4]/ul[1]/li[2]/a[1]/span[1]")
+	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[4]/ul[1]/li[2]/a[1]/span[1]")
 	public static WebElement fitnessEquipmentHiddenOption;
-	@FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[4]/ul[1]/li[3]/a[1]/span[1]")
+	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[4]/ul[1]/li[1]/a[1]/span[1]")
 	public static WebElement watchesHiddenOption ;
 	
 	

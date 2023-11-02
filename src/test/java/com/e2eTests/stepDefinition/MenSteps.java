@@ -10,12 +10,22 @@ import io.cucumber.java.en.When;
 
 public class MenSteps extends Base {
 
-	final MenOpbjects menOpbjects = new MenOpbjects();
+	//final MenOpbjects menOpbjects = new MenOpbjects();
 
+	MenOpbjects menOpbjects;
+	
+	public MenSteps() {
+		PageFactory.initElements(driver, MenOpbjects.class);
+		this.menOpbjects = new MenOpbjects();
+	}
+	
+	
+	
+	
 	// **check Jackets links in Men menu**//
 	@When("I click on the link Men Jakets through the hidden menu")
 	public void I_click_on_the_link_Men_Jakets_through_the_hidden_menu() {
-		PageFactory.initElements(driver, MenOpbjects.class);
+		//PageFactory.initElements(driver, MenOpbjects.class);
 		menOpbjects.clickOnHidenJackets();
 	}
 

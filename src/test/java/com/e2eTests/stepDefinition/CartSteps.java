@@ -10,12 +10,17 @@ import io.cucumber.java.en.When;
 
 public class CartSteps extends Base {
 
-	final CartObjects cartObjects = new CartObjects();
+	CartObjects cartObjects;
+	
+	public CartSteps() {
+		PageFactory.initElements(driver, CartObjects.class);
+		this.cartObjects =new CartObjects();
+	}
 
 	// **Add a single product to the cart**//
 	@When("I place the mouse on the product to add and i click on Add to Cart button")
 	public void I_place_the_mouse_on_the_product_to_add_and_i_click_on_Add_to_Cart_button() {
-		PageFactory.initElements(driver, CartObjects.class);
+		//PageFactory.initElements(driver, CartObjects.class);
 		cartObjects.selctProduct();
 	}
 
@@ -37,7 +42,7 @@ public class CartSteps extends Base {
 	// **Add product to cart without selecting size and color**//
 	@When("I place the mouse on the product to add")
 	public void I_place_the_mouse_on_the_product_to_add() {
-		PageFactory.initElements(driver, CartObjects.class);
+		//PageFactory.initElements(driver, CartObjects.class);
 		cartObjects.selectProductFailedcase();
 	}
 	
@@ -53,7 +58,7 @@ public class CartSteps extends Base {
 	//** Add multiple products to cart**//
 	@When("I navigate to the home page")
 	public void I_navigate_to_the_home_page() {
-		PageFactory.initElements(driver, CartObjects.class);
+		//PageFactory.initElements(driver, CartObjects.class);
 		cartObjects.clickOnHomeLogo();
 	}
 	@When("I place the mouse on other product to add and i click on Add to Cart button")
@@ -67,7 +72,7 @@ public class CartSteps extends Base {
 	//**Delete a product from the cart**//
 	@When("I click on the cart icon")
 	public void I_click_on_the_cart_icon() throws InterruptedException {
-		PageFactory.initElements(driver, CartObjects.class);
+		//PageFactory.initElements(driver, CartObjects.class);
 		Thread.sleep(3000);
 		cartObjects.clickOnCartIcon();
 	}
@@ -83,7 +88,7 @@ public class CartSteps extends Base {
 	//**Review and modification cart**//
 	@When("I click on View and Edit Cart button")
 	public void I_click_on_View_and_Edit_Cart_button() {
-		PageFactory.initElements(driver, CartObjects.class);
+		//PageFactory.initElements(driver, CartObjects.class);
 		cartObjects.clickOnViewEditCartButton();
 	}
 	@When("I click on Edit item parametres icon")

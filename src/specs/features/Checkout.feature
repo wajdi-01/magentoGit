@@ -3,7 +3,7 @@ Feature: Verify Checkout functionality
   As a customer,
   I want to be able to checkout and complete my purchase,
   So that I can receive the products I have ordered
-
+ 
   Scenario: Successful Checkout,Tabel Rate Shipping Methods
     Given I am on the Accueil page
     And I click on Shop Yoga Now link
@@ -92,4 +92,3 @@ Feature: Verify Checkout functionality
     And I select Rating and i click on Submit Review button
     Then The Review should be added
 
- 
