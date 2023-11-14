@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		  features = "src/specs/features",
 		      glue = "com/e2eTests",
-		       tags = "@whatsNews",
+		       tags = "@test",
 	        plugin = {"pretty", "html:target/cucumber-report.html", "json:target/cucumber.json" ,
 	        		//},
 	       
