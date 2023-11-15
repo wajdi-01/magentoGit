@@ -75,5 +75,10 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-
+	<distributionManagement>
+		<repository>
+			<id>LumaProject</id>
+			<url>https://maven.pkg.github.com/wajdi-01/magentoGit</url>
+		</repository>
+	</distributionManagement>
 </project>
